@@ -4,7 +4,14 @@
 void abslt(int nums[]){
     for (int i = 0; i < 5; i++)
     {
-        printf("O valor absoluto de %d é:\t%d\n", nums[i], nums[i]);
+        if (nums[i] < 0)
+        {
+            int n = nums[i] * (-1);
+            printf("O valor absoluto de %d é:\t%d\n", nums[i], n);
+        } else
+        {
+            printf("O valor absoluto de %d é:\t%d\n", nums[i], nums[i]);
+        }
     }
 }
 
