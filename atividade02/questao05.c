@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 float arit(float notas[]){
     float media = 0;
@@ -59,21 +60,22 @@ int main(int argc, char const *argv[]){
         printf("0 - Sair\n");
         printf("------------------\n");
 
-        char esc;
+        char esc, esc1;
         printf("Opção: ");
-        scanf("%s", &esc);
+        scanf(" %c", &esc);
+        esc = toupper(esc);
 
-        if (esc == 'A' || esc == 'a')
+        if (esc == 'A')
         {
             media = arit(notas);
             printf("\nA média aritmética é: %.2f\n", media);
         }
-        else if (esc == 'P' || esc == 'p')
+        else if (esc == 'P')
         {
             media = pon(notas, peso);
             printf("\nA média ponderada é: %.2f\n", media);
         }
-        else if (esc == 'H' || esc == 'h')
+        else if (esc == 'H')
         {
             media = har(notas);
             printf("\nA média harmônica é: %.2f\n", media);
