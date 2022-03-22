@@ -7,12 +7,12 @@ int main(int argc, char const *argv[]){
     int nStudant = 0;
     scanf("%d", &nStudant);
 
-    float studant[nStudant][3];
+    float studant[nStudant][4];
     int i, j;
 
     for (i = 0; i < nStudant; i++)
     {
-        for (j = 0; j < 2; j++)
+        for (j = 0; j < 3; j++)
         {
             printf("\nNota %d do aluno %d: ",j+1 , i+1);
             scanf("%f", &studant[i][j]);
@@ -32,16 +32,14 @@ int main(int argc, char const *argv[]){
                         return 0;
                     }
                 }
-            }
-    
+            } 
         }
-        studant[i][2] = (studant[i][0] + studant[i][1]) / 2;
+        studant[i][3] = (studant[i][0] + studant[i][1] + studant[i][2]) / 3;
     }
     for (int i = 0; i < nStudant; i++)
     {
-        printf("\nMédia do aluno %d é %.2f\n", i+1, studant[i][2]);
+        printf("\nMédia do aluno %d é %.2f\n", i+1, studant[i][3]);
     }
-    
     
     return 0;
 }
