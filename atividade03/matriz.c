@@ -14,9 +14,9 @@ void setPts(int n, ALUNO** tab){
     for (int i = 0; i < n; i++)
     {
         printf("\nDigite o nome do aluno: ");
-        scanf(" %82[^\n]", tab[i]->nome);
+        scanf(" %80[^\n]", tab[i]->nome);
         printf("\nDigite a matricula do aluno[Até 8 caracteres]: ");
-        scanf(" %9[^\n]", tab[i]->matricula);
+        scanf(" %7[^\n]", tab[i]->matricula);
         printf("\nDigite a turma do aluno[Somente 1 caractere]: ");
         scanf(" %c", &tab[i]->turma);
         printf("\nInforme as notas do aluno: ");
